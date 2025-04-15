@@ -1,0 +1,60 @@
+2025-04-15 01:16:37,695 - INFO - Starting comprehensive system tests
+2025-04-15 01:16:37,695 - INFO - Testing source data availability...
+2025-04-15 01:16:37,696 - ERROR - Raw data file not found: C:\Users\OPTIMUS\financial_data_modelling\financial_dbt\data\raw_financials.csv
+2025-04-15 01:16:37,696 - ERROR - Source data test failed - stopping further tests
+2025-04-15 01:22:09,244 - INFO - Starting comprehensive system tests
+2025-04-15 01:22:09,245 - INFO - Skipping source data test (data is in S3)...
+2025-04-15 01:22:09,247 - INFO - Testing dbt compilation...
+2025-04-15 01:22:09,249 - INFO - Running command: dbt compile
+2025-04-15 01:22:22,249 - INFO - 08:22:14  Running with dbt=1.9.4
+2025-04-15 01:22:22,249 - INFO - 08:22:14  Registered adapter: postgres=1.9.0
+2025-04-15 01:22:22,250 - INFO - 08:22:16  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+2025-04-15 01:22:22,250 - INFO - There are 1 unused configuration paths:
+2025-04-15 01:22:22,250 - INFO - - models.financial_dbt.example
+2025-04-15 01:22:22,251 - INFO - 08:22:16  Found 13 models, 37 data tests, 1 source, 547 macros
+2025-04-15 01:22:22,251 - INFO - 08:22:16
+2025-04-15 01:22:22,251 - INFO - 08:22:16  Concurrency: 4 threads (target='dev')
+2025-04-15 01:22:22,252 - INFO - 08:22:16
+2025-04-15 01:22:22,252 - INFO - Command completed successfully
+2025-04-15 01:22:22,252 - INFO - Connecting to database: financial_dw on localhost
+2025-04-15 01:22:22,393 - ERROR - Error connecting to the database: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-04-15 01:22:22,393 - ERROR - Database connection failed - stopping further tests
+2025-04-15 01:23:01,542 - INFO - Starting comprehensive system tests
+2025-04-15 01:23:01,543 - INFO - Skipping source data test (data is in S3)...
+2025-04-15 01:23:01,545 - INFO - Testing dbt compilation...
+2025-04-15 01:23:01,547 - INFO - Running command: dbt compile
+2025-04-15 01:23:11,939 - INFO - 08:23:06  Running with dbt=1.9.4
+2025-04-15 01:23:11,940 - INFO - 08:23:06  Registered adapter: postgres=1.9.0
+2025-04-15 01:23:11,940 - INFO - 08:23:07  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+2025-04-15 01:23:11,940 - INFO - There are 1 unused configuration paths:
+2025-04-15 01:23:11,940 - INFO - - models.financial_dbt.example
+2025-04-15 01:23:11,941 - INFO - 08:23:08  Found 13 models, 37 data tests, 1 source, 547 macros
+2025-04-15 01:23:11,941 - INFO - 08:23:08
+2025-04-15 01:23:11,942 - INFO - 08:23:08  Concurrency: 4 threads (target='dev')
+2025-04-15 01:23:11,943 - INFO - 08:23:08
+2025-04-15 01:23:11,945 - INFO - Command completed successfully
+2025-04-15 01:23:11,946 - INFO - Connecting to database: financial_dw on localhost
+2025-04-15 01:23:12,036 - ERROR - Error connecting to the database: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "financial_dw" does not exist
+
+2025-04-15 01:23:12,036 - ERROR - Database connection failed - stopping further tests
+2025-04-15 01:26:05,119 - INFO - Starting comprehensive system tests
+2025-04-15 01:26:05,120 - INFO - Skipping source data test (data is in S3)...
+2025-04-15 01:26:05,120 - INFO - Testing dbt compilation...
+2025-04-15 01:26:05,120 - INFO - Running command: dbt compile
+2025-04-15 01:26:16,405 - INFO - 08:26:09  Running with dbt=1.9.4
+2025-04-15 01:26:16,406 - INFO - 08:26:10  Registered adapter: postgres=1.9.0
+2025-04-15 01:26:16,407 - INFO - 08:26:11  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+2025-04-15 01:26:16,407 - INFO - There are 1 unused configuration paths:
+2025-04-15 01:26:16,407 - INFO - - models.financial_dbt.example
+2025-04-15 01:26:16,408 - INFO - 08:26:12  Found 13 models, 37 data tests, 1 source, 547 macros
+2025-04-15 01:26:16,408 - INFO - 08:26:12
+2025-04-15 01:26:16,408 - INFO - 08:26:12  Concurrency: 4 threads (target='dev')
+2025-04-15 01:26:16,408 - INFO - 08:26:12
+2025-04-15 01:26:16,408 - INFO - Command completed successfully
+2025-04-15 01:26:16,409 - INFO - Connecting to database: financial_dwh on localhost
+2025-04-15 01:26:16,502 - INFO - Database connection successful
+2025-04-15 01:26:16,503 - INFO - Skipping dbt model execution (assuming models are already run)...
+2025-04-15 01:26:16,503 - INFO - Running dbt tests...
+2025-04-15 01:26:16,503 - INFO - Running command: dbt test
+

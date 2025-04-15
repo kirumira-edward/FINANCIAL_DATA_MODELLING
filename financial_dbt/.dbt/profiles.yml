@@ -1,0 +1,15 @@
+
+financial_dbt:
+  outputs:
+    dev:
+      dbname: financial_dwh
+      host: localhost
+      pass: '12345'
+      port: 5432
+      schema: staging
+      threads: 4
+      type: postgres
+      user: postgres
+  target: dev
+
+

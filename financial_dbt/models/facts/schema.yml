@@ -1,0 +1,82 @@
+version: 2
+
+models:
+  - name: fact_financial_transactions
+    description: "Financial transactions fact table containing sales, discounts, and profit metrics"
+    columns:
+      - name: transaction_id
+        description: "Surrogate key for the transaction"
+        tests:
+          - unique
+          - not_null
+      
+      - name: date_key
+        description: "Foreign key to dim_date"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+      
+      - name: product_key
+        description: "Foreign key to dim_product"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_product')
+              field: product_key
+      
+      - name: segment_key
+        description: "Foreign key to dim_segment"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_segment')
+              field: segment_key
+      
+      - name: geography_key
+        description: "Foreign key to dim_geography"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_geography')
+              field: geography_key
+      
+      - name: discount_key
+        description: "Foreign key to dim_discount"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_discount')
+              field: discount_key
+      
+      - name: units_sold
+        description: "Number of units sold in the transaction"
+        tests:
+          - not_null
+      
+      - name: sale_price
+        description: "Price per unit at which the product was sold"
+      
+      - name: gross_sales
+        description: "Total sales amount before discounts"
+        tests:
+          - not_null
+      
+      - name: discounts
+        description: "Total discount amount applied"
+      
+      - name: net_sales
+        description: "Net sales amount after discounts"
+        tests:
+          - not_null
+      
+      - name: cogs
+        description: "Cost of goods sold"
+        tests:
+          - not_null
+      
+      - name: profit
+        description: "Profit amount (net_sales - cogs)"
+        tests:
+          - not_null
