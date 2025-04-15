@@ -28,16 +28,3 @@ This project demonstrates dimensional modeling techniques using a financial data
 - Day 9: Performance optimization
 - Day 10: Final documentation and presentation
 
-## Setup Instructions
-
-1. Configure environment variables in `.env` file:
-   - AWS_ACCESS_KEY_ID
-   - AWS_SECRET_ACCESS_KEY
-   - AWS_REGION
-   - S3_BUCKET_NAME
-   - DB_USER
-   - DB_PASSWORD
-   - DB_HOST
-   - DB_NAME
-
-2. Run the initial exploration notebook:
