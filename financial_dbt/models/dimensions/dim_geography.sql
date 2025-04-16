@@ -1,5 +1,5 @@
 with source as (
-    select distinct
+    select distinct -- takes unique countries from my data
         country_name
     from {{ ref('stg_raw_financials') }}
     where country_name is not null
@@ -9,7 +9,7 @@ with source as (
 countries_with_regions as (
     select
         country_name,
-        case
+        case -- providing and creates regions
             when country_name in ('United States', 'Canada', 'Mexico') then 'North America'
             when country_name in ('France', 'Germany', 'UK', 'Italy', 'Spain') then 'Europe'
             when country_name in ('Japan', 'China', 'India', 'South Korea') then 'Asia'
@@ -17,7 +17,7 @@ countries_with_regions as (
             when country_name in ('Australia', 'New Zealand') then 'Oceania'
             else 'Other'
         end as region,
-        case
+        case --creates sub regions
             when country_name in ('United States', 'Canada') then 'Northern America'
             when country_name = 'Mexico' then 'Central America'
             when country_name in ('France', 'Germany', 'UK', 'Italy', 'Spain') then 'Western Europe'
