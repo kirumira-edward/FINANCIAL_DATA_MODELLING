@@ -28,3 +28,6 @@ This project demonstrates dimensional modeling techniques using a financial data
 - Day 9: Performance optimization
 - Day 10: Final documentation and presentation
 
+##Architectural Diagram
+![ChatGPT Image Apr 16, 2025, 02_22_29 AM](https://github.com/user-attachments/assets/813d3728-d244-4a75-bffb-e5df07751bdc)
+
