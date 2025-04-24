@@ -1,0 +1,44 @@
+version: 2
+
+sources:
+  - name: raw
+    database: financial_dwh
+    schema: raw
+    tables:
+      - name: raw_financials
+        description: Raw financial data imported from CSV
+        columns:
+          - name: Segment
+            description: Business segment
+          - name: Country
+            description: Country where transaction occurred
+          - name: Product
+            description: Product name
+          - name: Discount Band
+            description: Discount category applied to transaction
+          - name: Units Sold
+            description: Number of units sold in this transaction
+          - name: Manufacturing Price
+            description: Cost to manufacture the product
+          - name: Sale Price
+            description: Price at which product was sold
+          - name: Gross Sales
+            description: Gross sales amount (Units Sold × Sale Price)
+          - name: Discounts
+            description: Discount amount applied to transaction
+          - name: Sales
+            description: Net sales after discount (Gross Sales - Discounts)
+          - name: COGS
+            description: Cost of goods sold (Units Sold × Manufacturing Price)
+          - name: Profit
+            description: Transaction profit (Sales - COGS)
+          - name: Date
+            description: Transaction date
+          - name: Month Number
+            description: Month number (1-12)
+          - name: Month Name
+            description: Month name
+          - name: Year
+            description: Transaction year
+
+            

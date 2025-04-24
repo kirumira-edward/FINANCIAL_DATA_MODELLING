@@ -1,0 +1,93 @@
+version: 2
+
+models:
+  - name: stg_raw_financials
+    description: Staging model for raw financial data
+    # [existing definitions...]
+
+  - name: dim_date
+    description: Date dimension table
+    columns:
+      - name: date_key
+        description: Surrogate key for date dimension
+        tests:
+          - unique
+          - not_null
+      - name: date_day
+        description: Calendar date
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_segment
+    description: Business segment dimension
+    columns:
+      - name: segment_key
+        description: Surrogate key for segment dimension
+        tests:
+          - unique
+          - not_null
+      - name: segment_name
+        description: Business segment name
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_product
+    description: Product dimension with SCD Type 2 tracking
+    columns:
+      - name: product_key
+        description: Surrogate key for product dimension
+        tests:
+          - unique
+          - not_null
+      - name: product_name
+        description: Product name
+        tests:
+          - not_null
+      - name: manufacturing_price
+        description: Cost to manufacture the product
+      - name: effective_date
+        description: Date when this product version became effective
+      - name: end_date
+        description: Date when this product version expired
+      - name: is_current
+        description: Flag indicating if this is the current version
+
+  - name: dim_geography
+    description: Geographic location dimension
+    columns:
+      - name: geography_key
+        description: Surrogate key for geography dimension
+        tests:
+          - unique
+          - not_null
+      - name: country_name
+        description: Country name
+        tests:
+          - unique
+          - not_null
+      - name: region
+        description: Geographic region
+      - name: sub_region
+        description: Geographic sub-region
+
+  - name: dim_discount
+    description: Discount band dimension
+    columns:
+      - name: discount_key
+        description: Surrogate key for discount dimension
+        tests:
+          - unique
+          - not_null
+      - name: discount_band
+        description: Discount category name
+        tests:
+          - unique
+          - not_null
+      - name: discount_range_min
+        description: Minimum discount percentage in range
+      - name: discount_range_max
+        description: Maximum discount percentage in range
+      - name: discount_description
+        description: Description of discount band
