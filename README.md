@@ -9,6 +9,10 @@ This project demonstrates dimensional modeling techniques using a financial data
 - **Staging Layer**: Cleaned and standardized data in PostgreSQL
 - **Dimensional Layer**: Star schema with fact and dimension tables
 
+## Data Model
+
+![Data Model](visualisations/data_model.png)
+
 ## Tools & Technologies
 
 - PostgreSQL for data warehousing
