@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# FINANCIAL_DATA_MODELLING
-=======
+
 # Financial Data Modeling Portfolio Project
 
 This project demonstrates dimensional modeling techniques using a financial dataset. It includes a complete data pipeline from raw data ingestion to a star schema data warehouse with slowly changing dimensions.
@@ -115,4 +113,3 @@ Pipeline execution logs are stored in the `logs` directory.
 - **Python**: Data processing and automation scripts
 
 
->>>>>>> 35f6d78f5fcb0ed1f3a8ea0f810e3ab38aeadf9f
