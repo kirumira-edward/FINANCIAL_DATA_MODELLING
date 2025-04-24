@@ -1,0 +1,226 @@
+version: 2
+
+models:
+  - name: monthly_sales_analysis
+    description: "Monthly sales analysis with month-over-month comparisons"
+    columns:
+      - name: year
+        description: "Year of the sales data"
+      - name: month_number
+        description: "Month number (1-12)"
+      - name: month_name
+        description: "Month name"
+      - name: gross_sales
+        description: "Total gross sales before discounts"
+      - name: total_discounts
+        description: "Total discount amount"
+      - name: net_sales
+        description: "Net sales after discounts"
+      - name: total_cogs
+        description: "Total cost of goods sold"
+      - name: total_profit
+        description: "Total profit"
+      - name: transaction_count
+        description: "Number of transactions"
+      - name: units_sold
+        description: "Total units sold"
+      - name: net_sales_mom_change
+        description: "Month-over-month change in net sales (absolute)"
+      - name: net_sales_mom_pct_change
+        description: "Month-over-month change in net sales (percentage)"
+      - name: profit_mom_change
+        description: "Month-over-month change in profit (absolute)"
+      - name: profit_mom_pct_change
+        description: "Month-over-month change in profit (percentage)"
+      - name: units_mom_change
+        description: "Month-over-month change in units sold (absolute)"
+      - name: units_mom_pct_change
+        description: "Month-over-month change in units sold (percentage)"
+
+  - name: product_profitability
+    description: "Product profitability analysis with rankings and margin categories"
+    columns:
+      - name: product_key
+        description: "Surrogate key for the product"
+      - name: product_name
+        description: "Name of the product"
+      - name: manufacturing_price
+        description: "Manufacturing cost per unit"
+      - name: gross_sales
+        description: "Total gross sales before discounts"
+      - name: total_discounts
+        description: "Total discount amount"
+      - name: net_sales
+        description: "Net sales after discounts"
+      - name: total_cogs
+        description: "Total cost of goods sold"
+      - name: total_profit
+        description: "Total profit"
+      - name: units_sold
+        description: "Total units sold"
+      - name: profit_per_unit
+        description: "Average profit per unit sold"
+      - name: profit_margin_pct
+        description: "Profit as a percentage of net sales"
+      - name: avg_sale_price
+        description: "Average selling price per unit"
+      - name: discount_pct
+        description: "Discounts as a percentage of gross sales"
+      - name: profit_rank
+        description: "Ranking by total profit (1 = highest profit)"
+      - name: volume_rank
+        description: "Ranking by units sold (1 = highest volume)"
+      - name: revenue_rank
+        description: "Ranking by net sales (1 = highest revenue)"
+      - name: profit_category
+        description: "Categorization based on profit margin (High/Medium/Low/Loss)"
+
+  - name: segment_performance
+    description: "Segment performance analysis with quarterly breakdown"
+    columns:
+      - name: segment_key
+        description: "Surrogate key for the segment"
+      - name: segment_name
+        description: "Name of the segment"
+      - name: year
+        description: "Year of the data"
+      - name: quarter
+        description: "Quarter of the data (1-4)"
+      - name: gross_sales
+        description: "Total gross sales before discounts"
+      - name: total_discounts
+        description: "Total discount amount"
+      - name: net_sales
+        description: "Net sales after discounts"
+      - name: total_cogs
+        description: "Total cost of goods sold"
+      - name: total_profit
+        description: "Total profit"
+      - name: units_sold
+        description: "Total units sold"
+      - name: transaction_count
+        description: "Number of transactions"
+      - name: profit_margin_pct
+        description: "Profit as a percentage of net sales"
+      - name: discount_pct
+        description: "Discounts as a percentage of gross sales"
+      - name: sales_contribution_pct
+        description: "Segment's contribution to total sales for the year"
+      - name: profit_contribution_pct
+        description: "Segment's contribution to total profit for the year"
+      - name: sales_qoq_growth_pct
+        description: "Quarter-over-quarter growth in sales (percentage)"
+
+  - name: geography_performance
+    description: "Geographical performance analysis with regional breakdown"
+    columns:
+      - name: geography_key
+        description: "Surrogate key for the geography"
+      - name: country_name
+        description: "Name of the country"
+      - name: region
+        description: "Region the country belongs to"
+      - name: year
+        description: "Year of the data"
+      - name: gross_sales
+        description: "Total gross sales before discounts"
+      - name: total_discounts
+        description: "Total discount amount"
+      - name: net_sales
+        description: "Net sales after discounts"
+      - name: total_cogs
+        description: "Total cost of goods sold"
+      - name: total_profit
+        description: "Total profit"
+      - name: units_sold
+        description: "Total units sold"
+      - name: transaction_count
+        description: "Number of transactions"
+      - name: profit_margin_pct
+        description: "Profit as a percentage of net sales"
+      - name: discount_pct
+        description: "Discounts as a percentage of gross sales"
+      - name: region_sales_contribution_pct
+        description: "Country's contribution to regional sales"
+      - name: region_profit_contribution_pct
+        description: "Country's contribution to regional profit"
+      - name: sales_yoy_growth_pct
+        description: "Year-over-year growth in sales (percentage)"
+      - name: profit_yoy_growth_pct
+        description: "Year-over-year growth in profit (percentage)"
+      - name: overall_profit_rank
+        description: "Overall ranking by profit (1 = highest profit)"
+      - name: region_profit_rank
+        description: "Ranking by profit within the region (1 = highest profit)"
+
+  - name: discount_analysis
+    description: "Discount effectiveness analysis across products and segments"
+    columns:
+      - name: discount_key
+        description: "Surrogate key for the discount band"
+      - name: discount_band
+        description: "Discount band description"
+      - name: product_key
+        description: "Surrogate key for the product"
+      - name: product_name
+        description: "Name of the product"
+      - name: segment_key
+        description: "Surrogate key for the segment"
+      - name: segment_name
+        description: "Name of the segment"
+      - name: gross_sales
+        description: "Total gross sales before discounts"
+      - name: total_discounts
+        description: "Total discount amount"
+      - name: net_sales
+        description: "Net sales after discounts"
+      - name: total_cogs
+        description: "Total cost of goods sold"
+      - name: total_profit
+        description: "Total profit"
+      - name: units_sold
+        description: "Total units sold"
+      - name: transaction_count
+        description: "Number of transactions"
+      - name: discount_pct
+        description: "Discounts as a percentage of gross sales"
+      - name: profit_margin_pct
+        description: "Profit as a percentage of net sales"
+      - name: pct_of_product_sales
+        description: "Percentage of product's total sales from this discount band"
+      - name: pct_of_product_profit
+        description: "Percentage of product's total profit from this discount band"
+      - name: pct_of_product_units
+        description: "Percentage of product's total units from this discount band"
+      - name: discount_per_unit
+        description: "Average discount amount per unit sold"
+      - name: profit_per_discount_dollar
+        description: "Profit generated per dollar of discount"
+      - name: roi_ratio
+        description: "Return on investment ratio for discounts (profit/discount)"
+      - name: discount_effectiveness
+        description: "Categorization of discount effectiveness (Highly Effective/Effective/Ineffective/Loss Making)"
+
+  - name: executive_dashboard
+    description: "Executive dashboard with key metrics across dimensions"
+    columns:
+      - name: metric_category
+        description: "Category of the metric (Overall Performance, Top Products, etc.)"
+      - name: time_period
+        description: "Time period or grouping value"
+      - name: dimension_value
+        description: "Name of the dimension (product, segment, country, etc.)"
+      - name: revenue
+        description: "Net sales revenue"
+      - name: profit
+        description: "Total profit"
+      - name: margin_pct
+        description: "Profit margin percentage"
+      - name: volume
+        description: "Units sold"
+      - name: revenue_pop_pct
+        description: "Period-over-period revenue change percentage"
+      - name: profit_pop_pct
+        description: "Period-over-period profit change percentage"
+      - name: margin_pop_delta
+        description: "Period-over-period margin change (percentage points)"

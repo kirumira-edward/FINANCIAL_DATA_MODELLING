@@ -1,0 +1,189 @@
+2025-04-14 01:35:59,218 - financial_pipeline - INFO - Starting financial data pipeline at 2025-04-14 01:35:59
+2025-04-14 01:35:59,218 - financial_pipeline - INFO - Starting data extraction and loading
+2025-04-14 01:35:59,219 - financial_pipeline - ERROR - Raw data file not found: C:\Users\OPTIMUS\financial_data_modelling\data\raw_financials.csv
+2025-04-14 01:35:59,219 - financial_pipeline - ERROR - Pipeline failed after 0.00 seconds: Data extraction and loading failed
+2025-04-14 01:35:59,220 - financial_pipeline - INFO - Would send notification: Financial Pipeline Failed
+2025-04-14 01:35:59,220 - financial_pipeline - INFO - Message: The financial data pipeline failed at 2025-04-14 01:35:59.
+Duration: 0.00 seconds.
+Error: Data extraction and loading failed
+2025-04-14 01:35:59,221 - financial_pipeline - INFO - Recipients: ['your_email@example.com', 'data_team@example.com']
+2025-04-14 01:37:00,938 - financial_pipeline - INFO - Starting financial data pipeline at 2025-04-14 01:37:00
+2025-04-14 01:37:00,938 - financial_pipeline - INFO - Starting data extraction and loading
+2025-04-14 01:37:00,939 - financial_pipeline - ERROR - Raw data file not found: C:\Users\OPTIMUS\financial_data_modelling\data\raw_financials.csv
+2025-04-14 01:37:00,940 - financial_pipeline - ERROR - Pipeline failed after 0.00 seconds: Data extraction and loading failed
+2025-04-14 01:37:00,942 - financial_pipeline - INFO - Would send notification: Financial Pipeline Failed
+2025-04-14 01:37:00,943 - financial_pipeline - INFO - Message: The financial data pipeline failed at 2025-04-14 01:37:00.
+Duration: 0.00 seconds.
+Error: Data extraction and loading failed
+2025-04-14 01:37:00,943 - financial_pipeline - INFO - Recipients: ['your_email@example.com', 'data_team@example.com']
+2025-04-14 01:37:22,004 - financial_pipeline - ERROR - Failed to send email notification: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-04-14 01:38:32,650 - financial_pipeline - INFO - Starting financial data pipeline at 2025-04-14 01:38:32
+2025-04-14 01:38:32,686 - financial_pipeline - INFO - No previous load date found, defaulting to: 2025-04-13
+2025-04-14 01:38:32,686 - financial_pipeline - INFO - Running dbt models: dim_*
+2025-04-14 01:38:32,691 - financial_pipeline - INFO - Running command: dbt run --models dim_* --vars '{"incremental_start_date": "2025-04-13"}'
+2025-04-14 01:38:36,674 - financial_pipeline - INFO - 08:38:36  The YAML provided in the --vars argument is not valid.
+2025-04-14 01:38:36,675 - financial_pipeline - ERROR - Usage: dbt run [OPTIONS]
+2025-04-14 01:38:36,941 - financial_pipeline - ERROR - Try 'dbt run -h' for help.
+2025-04-14 01:38:36,970 - financial_pipeline - ERROR - 
+2025-04-14 01:38:36,973 - financial_pipeline - ERROR - Error: Invalid value for '--vars': String ''{incremental_start_date:' is not valid YAML
+2025-04-14 01:38:36,974 - financial_pipeline - ERROR - Command failed with return code 2
+2025-04-14 01:38:36,974 - financial_pipeline - ERROR - dbt model run failed
+2025-04-14 01:38:36,975 - financial_pipeline - ERROR - Pipeline failed after 4.32 seconds: Dimension models failed
+2025-04-14 01:38:37,010 - financial_pipeline - INFO - Would send notification: Financial Pipeline Failed
+2025-04-14 01:38:37,014 - financial_pipeline - INFO - Message: The financial data pipeline failed at 2025-04-14 01:38:32.
+Duration: 4.32 seconds.
+Error: Dimension models failed
+2025-04-14 01:38:37,015 - financial_pipeline - INFO - Recipients: ['your_email@example.com', 'data_team@example.com']
+2025-04-14 01:38:58,088 - financial_pipeline - ERROR - Failed to send email notification: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-04-14 01:41:01,324 - financial_pipeline - INFO - Starting financial data pipeline at 2025-04-14 01:41:01
+2025-04-14 01:41:01,341 - financial_pipeline - INFO - No previous load date found, defaulting to: 2025-04-13
+2025-04-14 01:41:01,342 - financial_pipeline - INFO - Running dbt models: dim_*
+2025-04-14 01:41:01,342 - financial_pipeline - INFO - Running command: dbt run --models dim_* --vars "{incremental_start_date: '2025-04-13'}"
+2025-04-14 01:41:09,435 - financial_pipeline - INFO - 08:41:03  Running with dbt=1.9.4
+2025-04-14 01:41:09,436 - financial_pipeline - INFO - 08:41:04  Registered adapter: postgres=1.9.0
+2025-04-14 01:41:09,436 - financial_pipeline - INFO - 08:41:04  Unable to do partial parsing because config vars, config profile, or config target have changed
+2025-04-14 01:41:09,436 - financial_pipeline - INFO - 08:41:07  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+2025-04-14 01:41:09,436 - financial_pipeline - INFO - There are 1 unused configuration paths:
+2025-04-14 01:41:09,436 - financial_pipeline - INFO - - models.financial_dbt.example
+2025-04-14 01:41:09,437 - financial_pipeline - INFO - 08:41:07  Found 7 models, 36 data tests, 1 source, 547 macros
+2025-04-14 01:41:09,437 - financial_pipeline - INFO - 08:41:07  The selection criterion 'dim_*' does not match any enabled nodes
+2025-04-14 01:41:09,437 - financial_pipeline - INFO - 08:41:07  Nothing to do. Try checking your model configs and model specification args
+2025-04-14 01:41:09,437 - financial_pipeline - INFO - Command completed successfully
+2025-04-14 01:41:09,438 - financial_pipeline - INFO - dbt models completed successfully
+2025-04-14 01:41:09,438 - financial_pipeline - INFO - Running dbt models: fact_*
+2025-04-14 01:41:09,438 - financial_pipeline - INFO - Running command: dbt run --models fact_* --vars "{incremental_start_date: '2025-04-13'}"
+2025-04-14 01:41:15,783 - financial_pipeline - INFO - 08:41:13  Running with dbt=1.9.4
+2025-04-14 01:41:15,784 - financial_pipeline - INFO - 08:41:13  Registered adapter: postgres=1.9.0
+2025-04-14 01:41:15,784 - financial_pipeline - INFO - 08:41:13  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+2025-04-14 01:41:15,784 - financial_pipeline - INFO - There are 1 unused configuration paths:
+2025-04-14 01:41:15,784 - financial_pipeline - INFO - - models.financial_dbt.example
+2025-04-14 01:41:15,785 - financial_pipeline - INFO - 08:41:14  Found 7 models, 36 data tests, 1 source, 547 macros
+2025-04-14 01:41:15,785 - financial_pipeline - INFO - 08:41:14  The selection criterion 'fact_*' does not match any enabled nodes
+2025-04-14 01:41:15,785 - financial_pipeline - INFO - 08:41:14  Nothing to do. Try checking your model configs and model specification args
+2025-04-14 01:41:15,786 - financial_pipeline - INFO - Command completed successfully
+2025-04-14 01:41:15,787 - financial_pipeline - INFO - dbt models completed successfully
+2025-04-14 01:41:15,787 - financial_pipeline - ERROR - Pipeline failed after 14.46 seconds: name 'run_dbt_tests' is not defined
+2025-04-14 01:41:15,787 - financial_pipeline - INFO - Would send notification: Financial Pipeline Failed
+2025-04-14 01:41:15,788 - financial_pipeline - INFO - Message: The financial data pipeline failed at 2025-04-14 01:41:01.
+Duration: 14.46 seconds.
+Error: name 'run_dbt_tests' is not defined
+2025-04-14 01:41:15,789 - financial_pipeline - INFO - Recipients: ['your_email@example.com', 'data_team@example.com']
+2025-04-14 01:45:55,537 - financial_pipeline - INFO - Starting financial data pipeline at 2025-04-14 01:45:55
+2025-04-14 01:45:55,564 - financial_pipeline - INFO - No previous load date found, defaulting to: 2025-04-13
+2025-04-14 01:45:55,565 - financial_pipeline - INFO - Running dbt models: dim_*
+2025-04-14 01:45:55,568 - financial_pipeline - INFO - Running command: dbt run --models dim_* --vars "{incremental_start_date: '2025-04-13'}"
+2025-04-14 01:46:08,752 - financial_pipeline - INFO - 08:45:59  Running with dbt=1.9.4
+2025-04-14 01:46:08,753 - financial_pipeline - INFO - 08:46:00  Registered adapter: postgres=1.9.0
+2025-04-14 01:46:08,753 - financial_pipeline - INFO - 08:46:02  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+2025-04-14 01:46:08,753 - financial_pipeline - INFO - There are 1 unused configuration paths:
+2025-04-14 01:46:08,754 - financial_pipeline - INFO - - models.financial_dbt.example
+2025-04-14 01:46:08,754 - financial_pipeline - INFO - 08:46:02  Found 7 models, 36 data tests, 1 source, 547 macros
+2025-04-14 01:46:08,754 - financial_pipeline - INFO - 08:46:02  The selection criterion 'dim_*' does not match any enabled nodes
+2025-04-14 01:46:08,754 - financial_pipeline - INFO - 08:46:02  Nothing to do. Try checking your model configs and model specification args
+2025-04-14 01:46:08,755 - financial_pipeline - INFO - Command completed successfully
+2025-04-14 01:46:08,755 - financial_pipeline - INFO - dbt models completed successfully
+2025-04-14 01:46:08,755 - financial_pipeline - INFO - Running dbt models: fact_*
+2025-04-14 01:46:08,755 - financial_pipeline - INFO - Running command: dbt run --models fact_* --vars "{incremental_start_date: '2025-04-13'}"
+2025-04-14 01:46:14,915 - financial_pipeline - INFO - 08:46:12  Running with dbt=1.9.4
+2025-04-14 01:46:14,915 - financial_pipeline - INFO - 08:46:12  Registered adapter: postgres=1.9.0
+2025-04-14 01:46:14,915 - financial_pipeline - INFO - 08:46:13  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+2025-04-14 01:46:14,916 - financial_pipeline - INFO - There are 1 unused configuration paths:
+2025-04-14 01:46:14,916 - financial_pipeline - INFO - - models.financial_dbt.example
+2025-04-14 01:46:14,916 - financial_pipeline - INFO - 08:46:13  Found 7 models, 36 data tests, 1 source, 547 macros
+2025-04-14 01:46:14,916 - financial_pipeline - INFO - 08:46:13  The selection criterion 'fact_*' does not match any enabled nodes
+2025-04-14 01:46:14,916 - financial_pipeline - INFO - 08:46:13  Nothing to do. Try checking your model configs and model specification args
+2025-04-14 01:46:14,917 - financial_pipeline - INFO - Command completed successfully
+2025-04-14 01:46:14,917 - financial_pipeline - INFO - dbt models completed successfully
+2025-04-14 01:46:14,917 - financial_pipeline - INFO - Running dbt models: all
+2025-04-14 01:46:14,918 - financial_pipeline - INFO - Running command: dbt run --vars "{incremental_start_date: '2025-04-13'}"
+2025-04-14 01:46:28,501 - financial_pipeline - INFO - 08:46:18  Running with dbt=1.9.4
+2025-04-14 01:46:28,501 - financial_pipeline - INFO - 08:46:19  Registered adapter: postgres=1.9.0
+2025-04-14 01:46:28,501 - financial_pipeline - INFO - 08:46:20  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+2025-04-14 01:46:28,502 - financial_pipeline - INFO - There are 1 unused configuration paths:
+2025-04-14 01:46:28,502 - financial_pipeline - INFO - - models.financial_dbt.example
+2025-04-14 01:46:28,502 - financial_pipeline - INFO - 08:46:20  Found 7 models, 36 data tests, 1 source, 547 macros
+2025-04-14 01:46:28,502 - financial_pipeline - INFO - 08:46:20
+2025-04-14 01:46:28,502 - financial_pipeline - INFO - 08:46:20  Concurrency: 4 threads (target='dev')
+2025-04-14 01:46:28,503 - financial_pipeline - INFO - 08:46:20
+2025-04-14 01:46:28,503 - financial_pipeline - INFO - 08:46:24  1 of 7 START sql view model staging.dim_date ................................... [RUN]
+2025-04-14 01:46:28,503 - financial_pipeline - INFO - 08:46:24  2 of 7 START sql view model staging.stg_raw_financials ......................... [RUN]
+2025-04-14 01:46:28,504 - financial_pipeline - INFO - 08:46:24  1 of 7 OK created sql view model staging.dim_date .............................. [CREATE VIEW in 0.33s]
+2025-04-14 01:46:28,504 - financial_pipeline - INFO - 08:46:24  2 of 7 OK created sql view model staging.stg_raw_financials .................... [CREATE VIEW in 0.34s]
+2025-04-14 01:46:28,505 - financial_pipeline - INFO - 08:46:24  3 of 7 START sql view model staging.dim_discount ............................... [RUN]
+2025-04-14 01:46:28,506 - financial_pipeline - INFO - 08:46:25  4 of 7 START sql view model staging.dim_geography .............................. [RUN]
+2025-04-14 01:46:28,506 - financial_pipeline - INFO - 08:46:25  5 of 7 START sql view model staging.dim_product ................................ [RUN]
+2025-04-14 01:46:28,507 - financial_pipeline - INFO - 08:46:25  6 of 7 START sql view model staging.dim_segment ................................ [RUN]
+2025-04-14 01:46:28,508 - financial_pipeline - INFO - 08:46:25  3 of 7 OK created sql view model staging.dim_discount .......................... [CREATE VIEW in 0.41s]
+2025-04-14 01:46:28,508 - financial_pipeline - INFO - 08:46:25  4 of 7 OK created sql view model staging.dim_geography ......................... [CREATE VIEW in 0.42s]
+2025-04-14 01:46:28,509 - financial_pipeline - INFO - 08:46:25  6 of 7 OK created sql view model staging.dim_segment ........................... [CREATE VIEW in 0.44s]
+2025-04-14 01:46:28,509 - financial_pipeline - INFO - 08:46:25  5 of 7 OK created sql view model staging.dim_product ........................... [CREATE VIEW in 0.46s]
+2025-04-14 01:46:28,510 - financial_pipeline - INFO - 08:46:25  7 of 7 START sql incremental model staging.fact_financial_transactions ......... [RUN]
+2025-04-14 01:46:28,510 - financial_pipeline - INFO - 08:46:26  7 of 7 OK created sql incremental model staging.fact_financial_transactions .... [MERGE 700 in 0.65s]
+2025-04-14 01:46:28,511 - financial_pipeline - INFO - 08:46:26
+2025-04-14 01:46:28,511 - financial_pipeline - INFO - 08:46:26  Finished running 1 incremental model, 6 view models in 0 hours 0 minutes and 5.33 seconds (5.33s).
+2025-04-14 01:46:28,513 - financial_pipeline - INFO - 08:46:26
+2025-04-14 01:46:28,513 - financial_pipeline - INFO - 08:46:26  Completed successfully
+2025-04-14 01:46:28,514 - financial_pipeline - INFO - 08:46:26
+2025-04-14 01:46:28,514 - financial_pipeline - INFO - 08:46:26  Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+2025-04-14 01:46:28,515 - financial_pipeline - INFO - Command completed successfully
+2025-04-14 01:46:28,516 - financial_pipeline - INFO - dbt models completed successfully
+2025-04-14 01:46:28,516 - financial_pipeline - INFO - Pipeline completed successfully in 32.98 seconds
+2025-04-14 01:46:28,517 - financial_pipeline - INFO - Would send notification: Financial Pipeline Completed Successfully
+2025-04-14 01:46:28,517 - financial_pipeline - INFO - Message: The financial data pipeline ran successfully at 2025-04-14 01:45:55.
+Duration: 32.98 seconds.
+2025-04-14 01:46:28,518 - financial_pipeline - INFO - Recipients: ['edwardkirumira87@gmail.com']
+2025-04-14 01:48:42,187 - financial_pipeline - INFO - Starting financial data pipeline at 2025-04-14 01:48:42
+2025-04-14 01:48:42,205 - financial_pipeline - INFO - No previous load date found, defaulting to: 2025-04-13
+2025-04-14 01:48:42,205 - financial_pipeline - INFO - Running dbt models: dim_*
+2025-04-14 01:48:42,205 - financial_pipeline - INFO - Running command: dbt run --models dim_* --vars "{incremental_start_date: '2025-04-13'}"
+2025-04-14 01:48:47,870 - financial_pipeline - INFO - 08:48:45  Running with dbt=1.9.4
+2025-04-14 01:48:47,870 - financial_pipeline - INFO - 08:48:45  Registered adapter: postgres=1.9.0
+2025-04-14 01:48:47,870 - financial_pipeline - INFO - 08:48:46  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+2025-04-14 01:48:47,871 - financial_pipeline - INFO - There are 1 unused configuration paths:
+2025-04-14 01:48:47,871 - financial_pipeline - INFO - - models.financial_dbt.example
+2025-04-14 01:48:47,871 - financial_pipeline - INFO - 08:48:46  Found 7 models, 36 data tests, 1 source, 547 macros
+2025-04-14 01:48:47,871 - financial_pipeline - INFO - 08:48:46  The selection criterion 'dim_*' does not match any enabled nodes
+2025-04-14 01:48:47,872 - financial_pipeline - INFO - 08:48:46  Nothing to do. Try checking your model configs and model specification args
+2025-04-14 01:48:47,872 - financial_pipeline - INFO - Command completed successfully
+2025-04-14 01:48:47,872 - financial_pipeline - INFO - dbt models completed successfully
+2025-04-14 01:48:47,873 - financial_pipeline - INFO - Running dbt models: fact_*
+2025-04-14 01:48:47,873 - financial_pipeline - INFO - Running command: dbt run --models fact_* --vars "{incremental_start_date: '2025-04-13'}"
+2025-04-14 01:48:53,186 - financial_pipeline - INFO - 08:48:50  Running with dbt=1.9.4
+2025-04-14 01:48:53,186 - financial_pipeline - INFO - 08:48:50  Registered adapter: postgres=1.9.0
+2025-04-14 01:48:53,186 - financial_pipeline - INFO - 08:48:51  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+2025-04-14 01:48:53,187 - financial_pipeline - INFO - There are 1 unused configuration paths:
+2025-04-14 01:48:53,187 - financial_pipeline - INFO - - models.financial_dbt.example
+2025-04-14 01:48:53,187 - financial_pipeline - INFO - 08:48:51  Found 7 models, 36 data tests, 1 source, 547 macros
+2025-04-14 01:48:53,187 - financial_pipeline - INFO - 08:48:51  The selection criterion 'fact_*' does not match any enabled nodes
+2025-04-14 01:48:53,188 - financial_pipeline - INFO - 08:48:51  Nothing to do. Try checking your model configs and model specification args
+2025-04-14 01:48:53,188 - financial_pipeline - INFO - Command completed successfully
+2025-04-14 01:48:53,188 - financial_pipeline - INFO - dbt models completed successfully
+2025-04-14 01:48:53,189 - financial_pipeline - INFO - Running dbt models: staging.dim_*
+2025-04-14 01:48:53,189 - financial_pipeline - INFO - Running command: dbt run --models staging.dim_* --vars "{incremental_start_date: '2025-04-13'}"
+2025-04-14 01:48:59,340 - financial_pipeline - INFO - 08:48:55  Running with dbt=1.9.4
+2025-04-14 01:48:59,340 - financial_pipeline - INFO - 08:48:56  Registered adapter: postgres=1.9.0
+2025-04-14 01:48:59,342 - financial_pipeline - INFO - 08:48:56  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+2025-04-14 01:48:59,345 - financial_pipeline - INFO - There are 1 unused configuration paths:
+2025-04-14 01:48:59,346 - financial_pipeline - INFO - - models.financial_dbt.example
+2025-04-14 01:48:59,346 - financial_pipeline - INFO - 08:48:56  Found 7 models, 36 data tests, 1 source, 547 macros
+2025-04-14 01:48:59,347 - financial_pipeline - INFO - 08:48:56  The selection criterion 'staging.dim_*' does not match any enabled nodes
+2025-04-14 01:48:59,348 - financial_pipeline - INFO - 08:48:56  Nothing to do. Try checking your model configs and model specification args
+2025-04-14 01:48:59,349 - financial_pipeline - INFO - Command completed successfully
+2025-04-14 01:48:59,351 - financial_pipeline - INFO - dbt models completed successfully
+2025-04-14 01:48:59,351 - financial_pipeline - INFO - Running dbt models: staging.fact_*
+2025-04-14 01:48:59,351 - financial_pipeline - INFO - Running command: dbt run --models staging.fact_* --vars "{incremental_start_date: '2025-04-13'}"
+2025-04-14 01:49:04,958 - financial_pipeline - INFO - 08:49:02  Running with dbt=1.9.4
+2025-04-14 01:49:04,958 - financial_pipeline - INFO - 08:49:02  Registered adapter: postgres=1.9.0
+2025-04-14 01:49:04,958 - financial_pipeline - INFO - 08:49:03  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+2025-04-14 01:49:04,958 - financial_pipeline - INFO - There are 1 unused configuration paths:
+2025-04-14 01:49:04,958 - financial_pipeline - INFO - - models.financial_dbt.example
+2025-04-14 01:49:04,958 - financial_pipeline - INFO - 08:49:03  Found 7 models, 36 data tests, 1 source, 547 macros
+2025-04-14 01:49:04,958 - financial_pipeline - INFO - 08:49:03  The selection criterion 'staging.fact_*' does not match any enabled nodes
+2025-04-14 01:49:04,958 - financial_pipeline - INFO - 08:49:03  Nothing to do. Try checking your model configs and model specification args
+2025-04-14 01:49:04,966 - financial_pipeline - INFO - Command completed successfully
+2025-04-14 01:49:04,968 - financial_pipeline - INFO - dbt models completed successfully
+2025-04-14 01:49:04,969 - financial_pipeline - INFO - Pipeline completed successfully in 22.78 seconds
+2025-04-14 01:49:04,970 - financial_pipeline - INFO - Would send notification: Financial Pipeline Completed Successfully
+2025-04-14 01:49:04,970 - financial_pipeline - INFO - Message: The financial data pipeline ran successfully at 2025-04-14 01:48:42.
+Duration: 22.78 seconds.
+2025-04-14 01:49:04,972 - financial_pipeline - INFO - Recipients: ['edwardkirumira87@gmail.com']
